@@ -16,19 +16,19 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-_Note: Notice that this the depencies are meant to run on the latest stable chrome version Chromedriver 95, in case you have a different version please update the requirements accordinly.
+_Note: Notice that this the depencies are meant to run on the latest stable chrome version Chromedriver 95, in case you have a different version please update the requirements accordinly._
 
 ### Run the tests with
 
 In order to run the tests use the unittest module by running:
 
 ```sh
-python -m unittest tests/*
+python -m unittest tests/test*.py
 ```
 
 ### Docker
 
-In order to avoid issues with chrome configuration I decided to create a Dockerfile to run the tests, unfortunately it is failing due a robot check.
+In order to avoid issues with chrome configuration I decided to create a Dockerfile to run the tests, unfortunately it is failing due a robot check. Check the `docker-screenshot.png` file on the root directory.
 
 ```sh
 docker build -t e2e:0.1.1 .
